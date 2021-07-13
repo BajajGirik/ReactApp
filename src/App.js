@@ -30,6 +30,9 @@ function App() {
               <Profile />
             )}
           </Route>
+          <Route name="update" exact path="/profile/update">
+            <h1>Hello</h1>
+          </Route>
         </Switch>
       </Router>
     </div>  

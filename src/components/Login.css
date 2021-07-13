@@ -1,6 +1,5 @@
 .Login {
   height: 100vh;
-  background-color: aqua;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -69,14 +68,22 @@
   border-radius: 2rem;
   outline: none;
   border: none;
-  background-color: #0d6efd;
+  background-image: linear-gradient(
+    to right,
+    #ff512f 0%,
+    #dd2476 51%,
+    #ff512f 100%
+  );
   color: white;
-  transition: all 300ms ease-in-out;
 }
 
 .Login__button:hover {
-  background-color: #199954;
-  box-shadow: 5px 5px 5px #ccc;
+  background-image: linear-gradient(
+    to right,
+    #134e5e 0%,
+    #71b280 51%,
+    #134e5e 100%
+  );
 }
 
 @media only screen and (max-width: 38rem) {

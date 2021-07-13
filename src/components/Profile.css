@@ -1,6 +1,5 @@
 .Profile {
   height: 100vh;
-  background-color: aqua;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -24,6 +23,7 @@
 
 .Profile__pic {
   margin-right: 2rem;
+  margin-bottom: 1rem;
   position: relative;
 }
 
@@ -31,7 +31,7 @@
   cursor: pointer;
   position: absolute;
   bottom: 0;
-  right: 5px;
+  right: 7px;
   padding: 0.3rem 0.3rem 0.07rem 0.3rem;
   font-size: 2rem;
   background-color: #199954;
@@ -41,7 +41,7 @@
 }
 
 .Profile__pic > p:hover {
-  transform: scale(1.2);
+  transform: scale(1.15);
 }
 
 .Profile__pic > img {
@@ -75,4 +75,20 @@
   padding: 0;
   height: 2.5rem;
   color: #333;
+}
+
+.Profile__info > button {
+  cursor: pointer;
+  background-image: linear-gradient(to right, yellow, orange, red);
+  margin: 1rem 0.5rem 0 auto;
+  width: 5rem;
+  padding: 0.7rem;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  transition: all 300ms ease-in-out;
+}
+
+.Profile__info > button:hover {
+  transform: scale(1.2);
 }

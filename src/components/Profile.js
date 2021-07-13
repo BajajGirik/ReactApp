@@ -1,10 +1,15 @@
 import './Profile.css';
 import { useHistory } from "react-router-dom";
 import { useRef, useState } from 'react';
+import Header from './Header';
 
 function Profile() {
     const [img, setImg] = useState(null);
     const imgref = useRef(null);
+
+    const saveIt = (e) => {
+        e.preventDefault();
+    };
 
     const addImage = (e) => {
         const reader = new FileReader();
@@ -20,7 +25,8 @@ function Profile() {
 
     return (
         <div className="Profile">
-            <h1>Profile</h1>
+            <Header />
+            <h1>Edit Profile</h1>
 
             <input ref={imgref} type="file" name="userimage"
                 accept="image/*" onChange={addImage} hidden />
@@ -35,14 +41,20 @@ function Profile() {
                     )
                     }
                 </div>
-                <form className="Profile__info">
+                <form className="Profile__info" onSubmit={saveIt}>
                     <div>
                         <p className="fa fa-user"></p>
                         <input type="text" name="name" placeholder="Name"/>
                     </div>
                     <div>
                         <p className="fa fa-calendar"></p>
-                        <input type="date" name="DOB" />
+                        <input type="text" name="DOB" placeholder="Date Of Birth"
+                            onFocus={(e) => {
+                                e.currentTarget.type = "date";
+                                e.currentTarget.click();
+                            }}
+                            onBlur={(e) => e.currentTarget.type = "text"}
+                        />
                     </div>
                     <div>
                         <p className="fa fa-moon-o"></p>
@@ -53,6 +65,7 @@ function Profile() {
 	                    <p className="fa fa-bar-chart"></p>
                         <input type="number" name="height" placeholder="Height" />
                     </div>
+                    <button>Save</button>
                 </form>
             </div>
         </div>
