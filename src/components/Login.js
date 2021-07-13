@@ -2,7 +2,7 @@ import './Login.css';
 import { useHistory } from "react-router-dom";
 import { useRef } from 'react';
 
-function Login() {
+function Login({setUser}) {
     let history = useHistory();
     const emailref = useRef(null);
     const passref = useRef(null);
@@ -11,7 +11,10 @@ function Login() {
         e.preventDefault();
 
         if (emailref.current.value === "admin@gmail.com" && passref.current.value === "admin")
+        {
+            setUser(true);
             history.push("/");
+        }
         else
             alert("Credentials Not Valid");
     }

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   BrowserRouter as Router,
   Switch,
@@ -6,24 +6,28 @@ import {
   Redirect,
   Link
 } from "react-router-dom";
-import './App.css';
 import Login from './components/Login';
+import Profile from './components/Profile';
 
 function App() {
-  const [user, setUser] = useState(null);
+  const [user, setUser] = useState(true);
+
+  useEffect(() => {
+
+  }, [])
 
   return (
     <div className="App">
       <Router>
         <Switch>
           <Route name="login" exact path="/login">
-            <Login />
+            <Login setUser={setUser}/>
           </Route>
           <Route name="profile" exact path="/">
             {!user ? (
               <Redirect from="/" to="login" />
             ) : (
-              <h1>Hello</h1>
+              <Profile />
             )}
           </Route>
         </Switch>
