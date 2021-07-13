@@ -9,7 +9,7 @@ import Login from './components/Login';
 import UpdateProfile from './components/UpdateProfile';
 
 function App() {
-  const [user, setUser] = useState(true);
+  const [user, setUser] = useState(false);
 
   return (
     <div className="App">

@@ -77,30 +77,32 @@ function Profile() {
 
                         <div>
                             <p className="fa fa-bar-chart"></p>
-                            <input type="number" name="height" placeholder="Height" required
+                            <input type="number" name="height" placeholder="Height(in cm)" required
                                 value={height} onChange={(e) => setHeight(e.target.value)}
                             />
                         </div>
-                        <button>Save</button>
+                        <button type="submit">Save</button>
                     </form>
                 :
-                    <div className="UpdateProfile__info jsb">
-                        <div>
+                    <div className="UpdateProfile__info">
+                        <div className="jsb">
                             <p>Name</p>
                             <p>{name}</p>
                         </div>
-                        <div>
+                        <div className="jsb">
                             <p>Date Of Birth</p>
                             <p>{dob}</p>
                         </div>
-                        <div>
+                        <div className="jsb">
                             <p>Religion</p>
                             <p>{rel}</p>
                         </div>
-                        <div>
+                        <div className="jsb">
                             <p>Height</p>
-                            <p>{height}</p>
+                            <p>{height} </p>
                         </div>
+                        <button onClick={saveIt}>Edit</button>
+
                     </div>
                 }
             </div>

@@ -9,18 +9,15 @@
   position: relative;
   border-radius: 1rem;
   background-color: white;
-  padding: 6rem 3rem 3rem 3rem;
+  padding: 1.5rem 3rem 3rem 3rem;
   display: flex;
   flex-direction: column;
   box-shadow: 5px 5px 5px gray;
 }
 
 .Login__img {
-  position: absolute;
-  top: -25%;
-  left: 0;
-  right: 0;
   text-align: center;
+  margin-bottom: 1.5rem;
 }
 
 .Login__img > img {
@@ -88,7 +85,7 @@
 
 @media only screen and (max-width: 38rem) {
   .Login__form {
-    padding: 6rem 1.5rem 1.5rem 1.5rem;
+    padding: 1.5rem 1.5rem 1.5rem 1.5rem;
   }
 
   .Login__inpuContainer {
@@ -102,7 +99,7 @@
 
 @media only screen and (max-width: 25rem) {
   .Login__form {
-    padding: 6rem 1rem 1rem 1rem;
+    padding: 1.5rem 1rem 1rem 1rem;
   }
 
   .Login__inpuContainer {
