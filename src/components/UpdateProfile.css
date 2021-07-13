@@ -111,3 +111,7 @@ a {
 .UpdateProfile__info > button:hover {
   transform: scale(1.2);
 }
+
+.jsb {
+  justify-content: space-between;
+}

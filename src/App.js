@@ -1,13 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import {
   BrowserRouter as Router,
   Switch,
   Route,
   Redirect,
-  Link
 } from "react-router-dom";
 import Login from './components/Login';
-import Profile from './components/Profile';
 import UpdateProfile from './components/UpdateProfile';
 
 function App() {
@@ -24,11 +22,8 @@ function App() {
             {!user ? (
               <Redirect from="/" to="login" />
             ) : (
-              <Profile />
+              <UpdateProfile />
             )}
-          </Route>
-          <Route name="update" exact path="/profile/update">
-            <UpdateProfile />
           </Route>
         </Switch>
       </Router>
