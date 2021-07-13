@@ -9,10 +9,23 @@ function Profile() {
             <div className="Profile__container">
                 <div className="Profile__pic"></div>
                 <form className="Profile__info">
-                    <input type="text" name="name" placeholder="Name"/>
-                    <input type="date" name="DOB" />
-                    <input type="text" name="religion" placeholder="Religion" />
-                    <input type="number" name="height" placeholder="Height" />
+                    <div>
+                        <p className="fa fa-user"></p>
+                        <input type="text" name="name" placeholder="Name"/>
+                    </div>
+                    <div>
+
+                        <input type="date" name="DOB" />
+                    </div>
+                    <div>
+
+                        <input type="text" name="religion" placeholder="Religion" />
+                    </div>
+
+                    <div>
+
+                        <input type="number" name="height" placeholder="Height" />
+                    </div>
                 </form>
             </div>
         </div>
