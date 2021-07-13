@@ -8,13 +8,10 @@ import {
 } from "react-router-dom";
 import Login from './components/Login';
 import Profile from './components/Profile';
+import UpdateProfile from './components/UpdateProfile';
 
 function App() {
   const [user, setUser] = useState(true);
-
-  useEffect(() => {
-
-  }, [])
 
   return (
     <div className="App">
@@ -31,7 +28,7 @@ function App() {
             )}
           </Route>
           <Route name="update" exact path="/profile/update">
-            <h1>Hello</h1>
+            <UpdateProfile />
           </Route>
         </Switch>
       </Router>
