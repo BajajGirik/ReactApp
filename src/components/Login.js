@@ -23,7 +23,7 @@ function Login({setUser}) {
         <div className="Login">
             <form onSubmit={signIn} className="Login__form">
                 <div className="Login__img">
-                    <img src={process.env.PUBLIC_URL + '/user.png'} />
+                    <img src={process.env.PUBLIC_URL + '/user.png'} alt="Login"/>
                 </div>
                 <div className="Login__inpuContainer">
                     <div className="fa fa-envelope"></div>
