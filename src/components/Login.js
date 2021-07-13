@@ -19,7 +19,9 @@ function Login() {
     return (
         <div className="Login">
             <form onSubmit={signIn} className="Login__form">
-                <h1>LOGIN</h1>
+                <div className="Login__img">
+                    <img src={process.env.PUBLIC_URL + '/user.png'} />
+                </div>
                 <div className="Login__inpuContainer">
                     <div className="fa fa-envelope"></div>
                     <input ref={emailref} type="email" placeholder="Email ID" name="Email" required />

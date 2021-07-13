@@ -7,20 +7,35 @@
 }
 
 .Login__form {
+  position: relative;
+  border-radius: 1rem;
   background-color: white;
-  padding: 2rem;
+  padding: 6rem 3rem 3rem 3rem;
   display: flex;
   flex-direction: column;
   box-shadow: 5px 5px 5px gray;
+}
+
+.Login__img {
+  position: absolute;
+  top: -25%;
+  left: 0;
+  right: 0;
+}
+
+.Login__img > img {
+  height: 8rem;
+  border-radius: 50%;
+  object-fit: fill;
 }
 
 .Login__inpuContainer {
   background-color: whitesmoke;
   display: flex;
   align-items: center;
-  width: 40rem;
+  width: 30rem;
   height: 2.5rem;
-  margin-bottom: 0.8rem;
+  margin-bottom: 1rem;
   padding: 0 0.5rem;
   border-radius: 2rem;
   transition: all 300ms ease-in;
@@ -48,7 +63,7 @@
   cursor: pointer;
   font-size: 1rem;
   font-weight: 500;
-  width: 40rem;
+  width: 30rem;
   height: 2.5rem;
   border-radius: 2rem;
   outline: none;
