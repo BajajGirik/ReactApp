@@ -144,3 +144,29 @@ a {
     width: 17rem;
   }
 }
+
+.Logout {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 1rem;
+  background-image: linear-gradient(
+    to right,
+    #ff4b1f 0%,
+    #ff9068 51%,
+    #ff4b1f 100%
+  );
+  color: white;
+  margin: 1rem 0.5rem 0 auto;
+  width: 5rem;
+  padding: 0.7rem;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background-size: 200% auto;
+  transition: all 0.5s ease-in-out;
+}
+
+.Logout:hover {
+  background-position: right center;
+}

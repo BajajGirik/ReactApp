@@ -22,7 +22,7 @@ function App() {
             {!user ? (
               <Redirect from="/" to="login" />
             ) : (
-              <UpdateProfile />
+                <UpdateProfile setUser={setUser}/>
             )}
           </Route>
         </Switch>

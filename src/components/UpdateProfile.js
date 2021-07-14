@@ -2,7 +2,7 @@ import './UpdateProfile.css';
 import { useRef, useState } from 'react';
 
 
-function Profile() {
+function Profile({setUser}) {
     const [update, setUpdate] = useState(true);
     const imgref = useRef(null);
     const [img, setImg] = useState('');
@@ -37,6 +37,8 @@ function Profile() {
             <input ref={imgref} type="file" name="userimage"
                 accept="image/*" onChange={addImage} hidden />
             
+            <button className="Logout" onClick={() => setUser(false)}>LogOut</button>
+
             <div className="UpdateProfile__container">
                 <div className="UpdateProfile__pic">
                     { update && 
@@ -99,7 +101,7 @@ function Profile() {
                         </div>
                         <div className="jsb">
                             <p>Height</p>
-                            <p>{height} </p>
+                            <p>{height} cm</p>
                         </div>
                         <button onClick={saveIt}>Edit</button>
 
